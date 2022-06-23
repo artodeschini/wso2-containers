@@ -6,14 +6,12 @@ Possui já instalado e configurado:
 
 Para construir a imagem, faça:
 
-```
-#!shell-session
-docker build -t wso2senai/bps-container:3.5.0-SNAPSHOT .
+```bash
+docker build -t bps-container:3.5.0-SNAPSHOT .
 ```
 
 Exemplo de como executá-la (em portão não padrão):
 
-```
-#!shell-session
-docker run -d -p 9444:9444 -e WSO2_PORT=9444 -e WSO2_PORT_OFFSET=1 wso2senai/bps-container:3.5.0-SNAPSHOT
+```bash
+docker run -d -p 9444:9444 -e WSO2_PORT=9444 -e WSO2_PORT_OFFSET=1 bps-container:3.5.0-SNAPSHOT
 ```

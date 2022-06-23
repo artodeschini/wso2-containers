@@ -1,9 +1,9 @@
 db:
-    image: wso2senai/wso2-base-container
+    image: wso2-base-container
 stratos:
     image: stratos:4.0.0
 private-paas:
-    build: -t wso2senai/private-paas .
+    build: -t private-paas .
     command: 
     ports:
         - "9443:9443"

@@ -6,14 +6,12 @@ Possui já instalado e configurado:
 
 Para construir a imagem, faça:
 
-```
-#!shell-session
-docker build -t wso2senai/as-container:5.2.1 .
+```bash
+docker build -t as-container:5.2.1 .
 ```
 
 Exemplo de como executá-la (em portão não padrão):
 
-```
-#!shell-session
-docker run -d -p 9444:9444 -e WSO2_PORT=9444 -e WSO2_PORT_OFFSET=1 wso2senai/as-container:5.2.1
+```bash
+docker run -d -p 9443:9444 -e WSO2_PORT=9444 -e WSO2_PORT_OFFSET=1 as-container:5.2.1
 ```

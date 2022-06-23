@@ -23,37 +23,44 @@ O repositório está organizado da seguinte forma:
 
 Como não está em um repositório Docker precisaremos registrar os containers no servidor local para que possamos, por exemplo, referenciar a imagem base (`FROM base-container`) nas demais imagens. Para isto, no diretório `/wso2-docker-containers/base-container` execute:
 
-```
-#!shell-session
-docker build -t wso2senai/base-container .
+```bash
+docker build -t base-container .
 ```
 
-Isto irá construir a imagem base `wso2senai/base-container`, contendo um servidor PostgreSQL.
+Isto irá construir a imagem base `base-container`, contendo um servidor PostgreSQL.
 
 Para mais informação, verifique a [documentação oficial do Docker][docker-docs] e os [exemplos de container][docker-library]
 
+## Como usar offSet dos containers wso2
+
+Tendo criado a imagens do container
+
+```bash
+docker run -d -p 9444:9444 -e WSO2_PORT=9444 -e WSO2_PORT_OFFSET=1 {wso2container_selecionado}
+```
+
 [docker-docs]: https://docs.docker.com/
 [docker-library]: https://github.com/docker-library
-[base-container]: https://bitbucket.org/wso2senai/wso2-docker-containers/src/master/base-container
-[esb-container]: https://bitbucket.org/wso2senai/wso2-docker-containers/src/master/esb-container
+[base-container]: /base-container/README.md
+[esb-container]:/esb-container
 [wso2-esb-site]: http://wso2.com/products/enterprise-service-bus/
-[dss-container]: https://bitbucket.org/wso2senai/wso2-docker-containers/src/master/dss-container
+[dss-container]:/dss-container/README.md
 [wso2-dss-site]: http://wso2.com/products/data-services-server/
-[carbon-container]: https://bitbucket.org/wso2senai/wso2-docker-containers/src/master/carbon-container
+[carbon-container]:/carbon-container/README.md
 [wso2-carbon-site]: http://wso2.com/products/carbon/
-[as-container]: https://bitbucket.org/wso2senai/wso2-docker-containers/src/master/as-container
+[as-container]:/as-container/README.md
 [wso2-as-site]: http://wso2.com/products/application-server/
-[is-container]: https://bitbucket.org/wso2senai/wso2-docker-containers/src/master/is-container
+[is-container]:/is-container/README.md
 [wso2-is-site]: http://wso2.com/products/identity-server/
-[apim-container]: https://bitbucket.org/wso2senai/wso2-docker-containers/src/master/am-container
+[apim-container]:/am-container/README.md
 [wso2-apim-site]: http://wso2.com/api-management/
-[bam-container]: https://bitbucket.org/wso2senai/wso2-docker-containers/src/master/bam-container
+[bam-container]:/bam-container/README.md
 [wso2-bam-site]: http://wso2.com/products/business-activity-monitor/
-[greg-container]: https://bitbucket.org/wso2senai/wso2-docker-containers/src/master/greg-container
+[greg-container]:/greg-container/README.md
 [wso2-greg-site]: http://wso2.com/products/governance-registry/
-[bps-container]: https://bitbucket.org/wso2senai/wso2-docker-containers/src/master/bps-container
+[bps-container]:/bps-container/README.md
 [wso2-bps-site]: http://wso2.com/products/business-process-server/
-[brs-container]: https://bitbucket.org/wso2senai/wso2-docker-containers/src/master/brs-container
+[brs-container]:/brs-container/README.md
 [wso2-brs-site]: http://wso2.com/products/business-rules-server/
-[private-paas-compose]: https://bitbucket.org/wso2senai/wso2-docker-containers/src/master/private-paas-compose
+[private-paas-compose]:/private-paas-compose/README.md
 [wso2-private-paas-site]: http://wso2.com/cloud/private-paas/

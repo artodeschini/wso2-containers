@@ -6,14 +6,12 @@ Possui já instalado e configurado:
 
 Para construir a imagem, faça:
 
-```
-#!shell-session
-docker build -t wso2senai/greg-container:4.6.0 .
+```bash
+docker build -t greg-container:4.6.0 .
 ```
 
 Exemplo de como executá-la (em porta não padrão):
 
-```
-#!shell-session
-docker run -d -p 9444:9444 -e WSO2_PORT=9444 -e WSO2_PORT_OFFSET=1 wso2senai/greg-container:4.6.0
+```bash
+docker run -d -p 9444:9444 -e WSO2_PORT=9444 -e WSO2_PORT_OFFSET=1 greg-container:4.6.0
 ```

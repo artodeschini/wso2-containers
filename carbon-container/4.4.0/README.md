@@ -6,14 +6,12 @@ Possui já instalado e configurado:
 
 Para construir a imagem, faça:
 
-```
-#!shell-session
-docker build -t wso2senai/carbon-container:4.4.0 .
+```bash
+docker build -t carbon-container:4.4.0 .
 ```
 
 Exemplo de como executá-la (em portão não padrão):
 
-```
-#!shell-session
-docker run -d -p 9444:9444 -e WSO2_PORT=9444 -e WSO2_PORT_OFFSET=1 wso2senai/carbon-container:4.4.0
+```bash
+docker run -d -p 9444:9444 -e WSO2_PORT=9444 -e WSO2_PORT_OFFSET=1 carbon-container:4.4.0
 ```
